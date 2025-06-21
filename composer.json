@@ -1,5 +1,5 @@
 {
-    "name": "tu-vendor/crud-generator",
+    "name": "tu-vendor/arzuaga-crud-generator",
     "description": "Generador CRUD artesanal para Laravel",
     "type": "library",
     "license": "MIT",
