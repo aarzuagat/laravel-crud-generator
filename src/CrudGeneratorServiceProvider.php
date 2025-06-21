@@ -1,9 +1,9 @@
 <?php
 
-namespace TuVendor\CrudGenerator;
+namespace Arzuaga\CrudGenerator;
 
 use Illuminate\Support\ServiceProvider;
-use TuVendor\CrudGenerator\Console\CrudGenerator;
+use Arzuaga\CrudGenerator\Console\CrudGenerator;
 
 class CrudGeneratorServiceProvider extends ServiceProvider
 {
