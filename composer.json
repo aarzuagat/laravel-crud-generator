@@ -1,0 +1,30 @@
+{
+    "name": "tu-vendor/crud-generator",
+    "description": "Generador CRUD artesanal para Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alberto Arzuaga",
+            "email": "aarzuagat@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TuVendor\\CrudGenerator\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TuVendor\\CrudGenerator\\CrudGeneratorServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": ">=8.1",
+        "illuminate/support": "^10|^11",
+        "illuminate/console": "^10|^11"
+    }
+}

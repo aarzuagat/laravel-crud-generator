@@ -1,0 +1,64 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Requests\{{ModelName}}Request;
+use App\Models\{{ModelName}};
+use Illuminate\Http\Response;
+
+
+class {{ModelName}}Controller extends Controller
+{
+
+
+    /**
+     * @OA\Get(
+     *     path="/api/{{snake_name}}",
+     *     tags={"{{ModelName}}"},
+     *     summary="List of {{model_plural}}",
+     *     description="Get list of all registered {{model_plural}}",
+     *     operationId="list{{ModelName}}",
+     *     @OA\Response(
+     *         response=200,
+     *         description="successful operation",
+     *          @OA\JsonContent()
+     *     ),
+     *       security={{ "apiAuth": {} }}
+     *     ),
+     */
+    public function index()
+    {
+        $query = {{ModelName}}::all();
+        return $this->sendResponse($query);
+    }
+
+
+    public function store({{ModelName}}Request $request): Response
+    {
+        ${{snake_under}} = {{ModelName}}::create($request->all());
+        return $this->sendResponse(${{snake_under}}->fresh(), 201);
+    }
+
+
+    public function show(string $id): Response
+    {
+        ${{snake_under}} = {{ModelName}}::findOrFail($id);
+        return $this->sendResponse(${{snake_under}}->fresh());
+    }
+
+
+
+    public function update({{ModelName}}Request $request, string $id): Response
+    {
+        ${{snake_under}} = {{ModelName}}::findOrFail($id);
+        ${{snake_under}}->update($request->all());
+        return $this->sendResponse(${{snake_under}}->fresh());
+    }
+
+    public function destroy(string $id): Response
+    {
+        ${{snake_under}} = {{ModelName}}::findOrFail($id);
+        ${{snake_under}}->delete();
+        return $this->sendResponse("ok", 204);
+    }
+}
