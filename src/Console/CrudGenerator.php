@@ -63,7 +63,14 @@ class CrudGenerator extends Command
     public function getStubs(string $type): string
     {
 
-        return file_get_contents(__DIR__ . '/../../../stubs/' . $type . '.stub');
+        $customPath = resource_path("stubs/{$type}.stub");
+        $defaultPath = __DIR__ . "/../../../stubs/{$type}.stub";
+
+        if (file_exists($customPath)) {
+            return file_get_contents($customPath);
+        }
+
+        return file_get_contents($defaultPath);
     }
 
     public function generateElem(string $name, string $type): bool
