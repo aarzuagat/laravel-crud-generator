@@ -1,6 +1,6 @@
 <?php
 
-namespace TuVendor\CrudGenerator\Console;
+namespace Arzuaga\CrudGenerator\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
