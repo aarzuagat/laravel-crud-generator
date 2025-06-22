@@ -138,7 +138,7 @@ class CrudGenerator extends Command
 
     private function createResourcePath(string $name): void
     {
-        $snake = Str::lower(Str::snake($name, '-'));
+        $snake = Str::plural(Str::lower(Str::snake($name, '-')));
         $path_to_file = base_path('routes/api.php');
         $append_route = "Route::apiResource('$snake', " . $name . "Controller::class);\n";
         File::append($path_to_file, $append_route);
