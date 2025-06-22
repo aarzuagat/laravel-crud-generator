@@ -11,21 +11,7 @@ class {{ModelName}}Controller extends Controller
 {
 
 
-    /**
-     * @OA\Get(
-     *     path="/api/{{snake_name}}",
-     *     tags={"{{ModelName}}"},
-     *     summary="List of {{model_plural}}",
-     *     description="Get list of all registered {{model_plural}}",
-     *     operationId="list{{ModelName}}",
-     *     @OA\Response(
-     *         response=200,
-     *         description="successful operation",
-     *          @OA\JsonContent()
-     *     ),
-     *       security={{ "apiAuth": {} }}
-     *     ),
-     */
+
     public function index()
     {
         $query = {{ModelName}}::all();
