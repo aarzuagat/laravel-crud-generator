@@ -9,7 +9,7 @@
 Requiere Laravel **8.x a 12.x** y PHP **>= 8.0**
 
 ```bash
-composer require arzuaga/crud-generator:^1.1.3
+composer require arzuaga/crud-generator:^1.1.4
 ```
 📦 Publicar los stubs
 Si deseas utilizar las plantillas por defecto, utiliza los archivos generados:
